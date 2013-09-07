@@ -1,0 +1,29 @@
+<h1>Listing orphans</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>Image Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orphans.each do |orphan| %>
+  <tr>
+    <td><%= orphan.description %></td>
+    <td><%= orphan.latitude %></td>
+    <td><%= orphan.longitude %></td>
+    <td><%= orphan.image_url %></td>
+    <td><%= link_to 'Show', orphan %></td>
+    <td><%= link_to 'Edit', edit_orphan_path(orphan) %></td>
+    <td><%= link_to 'Destroy', orphan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Orphan', new_orphan_path %>

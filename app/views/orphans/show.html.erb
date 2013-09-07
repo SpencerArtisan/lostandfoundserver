@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Description:</b>
+  <%= @orphan.description %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @orphan.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @orphan.longitude %>
+</p>
+
+<p>
+  <b>Image Url:</b>
+  <%= @orphan.image_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_orphan_path(@orphan) %> |
+<%= link_to 'Back', orphans_path %>
