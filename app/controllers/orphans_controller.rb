@@ -1,4 +1,6 @@
 class OrphansController < ApplicationController
+  skip_before_action :verify_authenticity_token
+
   # GET /orphans
   # GET /orphans.json
   def index
